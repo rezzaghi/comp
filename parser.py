@@ -24,7 +24,7 @@ class Parser:
         else:
             return False
 
-    def parseFactor(self):
+    def parseParen(self):
         if (self.getTok().type == Tok.LEFT_PAREN):
             self.nextTok()
             expr = self.parseExpression()
@@ -38,7 +38,7 @@ class Parser:
         return Literal(self.getTok().value)
 
     def parseExpression(self):
-        left = self.parseFactor()
+        left = self.parseParen()
         if(self.accept(Tok.OPERATOR)):
             op = Literal(self.getTok().value)
             self.nextTok()
