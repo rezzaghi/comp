@@ -5,7 +5,6 @@ class Tok(enum.Enum):
     NUMBER = 2
     LEFT_PAREN = 3
     RIGHT_PAREN = 4
-    SEMICOLON = 5
 
 class TokType:
     def __init__(self, type, value ):

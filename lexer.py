@@ -11,6 +11,4 @@ def lex(file):
             listOfTokens.append(TokType(Tok.LEFT_PAREN, w))
         if(w == ")"):
             listOfTokens.append(TokType(Tok.RIGHT_PAREN, w))
-        if(w == ";"):
-            listOfTokens.append(TokType(Tok.SEMICOLON, w))
     return listOfTokens

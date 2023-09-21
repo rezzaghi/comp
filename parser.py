@@ -50,7 +50,6 @@ class Parser:
     def parse(self):
         ast = []
         while(self.index < len(self.listOfTok) - 1):
-            #TODO parse var
             ast.append(self.parseExpression())
             self.nextTok()
         return ast
