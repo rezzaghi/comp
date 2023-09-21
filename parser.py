@@ -49,7 +49,7 @@ class Parser:
 
     def parse(self):
         ast = []
-        while(self.index < len(self.listOfTok) - 1):
+        while(self.index < len(self.listOfTok)):
             ast.append(self.parseExpression())
             self.nextTok()
         return ast
